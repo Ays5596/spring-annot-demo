@@ -21,7 +21,8 @@ public class App
         System.out.println("bean created for actor "+act);
         act.test();
         Movie mov = context.getBean("movie", Movie.class);
-        System.out.println("bean is created for movie! "+mov);
         mov.disp();
+        Movie mov1 = context.getBean("movie", Movie.class);
+        System.out.println(mov==mov1);
     }
 }
