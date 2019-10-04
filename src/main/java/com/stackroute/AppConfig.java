@@ -10,22 +10,19 @@ import org.springframework.context.annotation.Scope;
 import java.lang.reflect.AccessibleObject;
 
 @Configuration
-@ComponentScan(basePackages = "com.stackroute.domain")
+//@ComponentScan(basePackages = "com.stackroute.domain")
 public class AppConfig {
    @Bean
     public Actor actor(){
-        Actor hr = new Actor();
-       hr.setName("Hrithik");
-       hr.setGender("Male");
-       hr.setAge(42);
+        Actor hr = new Actor("Hrithik","Male",42);
         return hr;
     }
-    /*
+
     @Bean
+ // @Scope  [is by default singelton]
     @Scope("prototype")
     public Movie movie(){
         Movie movie = new Movie(actor());
         return movie;
     }
-*/
 }

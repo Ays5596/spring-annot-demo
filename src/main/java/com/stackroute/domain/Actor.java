@@ -4,21 +4,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.w3c.dom.ls.LSOutput;
 
-@Component("actor")
+//@Component("actor")
 public class Actor {
     private String name;
     private String gender;
     private int age;
 
-    public void setName(String name) {
+    public Actor(String name, String gender, int age) {
         this.name = name;
-    }
-
-    public void setGender(String gender) {
         this.gender = gender;
-    }
-
-    public void setAge(int age) {
         this.age = age;
     }
 

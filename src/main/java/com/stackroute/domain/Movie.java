@@ -5,18 +5,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component("movie")
+//@Component("movie")
 public class Movie {
-    @Autowired
-//  [Autowire before setter is Autowire byName]
+
     private Actor hr;
 
-    /*
-    @Autowired
-    [Autowire before setter is Autowire byType]
-    public void setHr(Actor hr) {
+    public Movie(Actor hr) {
         this.hr = hr;
-    }*/
+    }
 
     public void disp(){
         System.out.println(hr);
